@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@syncfusion/ej2-react-circulargauge": "^17.1.50",
+    "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "d3": "^5.9.2",
     "react": "^16.8.6",

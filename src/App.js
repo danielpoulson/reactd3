@@ -1,13 +1,27 @@
 import React from "react";
-import Line from "./line";
+import Gauge from "./gauge/gauge";
+import Bar from "./bar/barComp";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <header className="App-header" />
-      <div className="App-body">
-        <Line />
+      <div className="app-body">
+        <div className="row">
+          <div className="app-panel__left">
+            <Gauge name="Current" value={49} />
+          </div>
+          <div className="app-panel__right">
+            <Bar />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-5">
+            <Gauge name="Last 30 days" value={62} />
+          </div>
+          <div className="col-7" />
+        </div>
       </div>
     </div>
   );
