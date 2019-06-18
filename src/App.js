@@ -1,6 +1,7 @@
 import React from "react";
 import Gauge from "./gauge/gauge";
 import Bar from "./bar/barComp";
+import DataList from "./data-list";
 import "./App.css";
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           <div className="col-5">
             <Gauge name="Last 30 days" value={62} />
           </div>
-          <div className="col-7" />
+          <div className="col-7">
+            <DataList />
+          </div>
         </div>
       </div>
     </div>
