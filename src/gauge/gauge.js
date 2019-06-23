@@ -33,8 +33,8 @@ export default class Gauge extends Component {
           <CircularGaugeComponent
             load={this.load}
             id={this.props.name}
-            height="300px"
-            width="435px"
+            height="330px"
+            width="420px"
             centerY="60%"
           >
             <Inject services={[Annotations]} />

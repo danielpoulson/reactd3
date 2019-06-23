@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import Chart from "chart.js";
 import classes from "./bar.module.css";
 
-const Bar = ({ data, labels, lean }) => {
+const Bar = ({ data, labels }) => {
   const chartRef = React.createRef();
 
   useEffect(() => {
     const myChartRef = chartRef.current.getContext("2d");
+
     let bg;
     bg = data.map(d => {
       if (d < 45) {
@@ -15,6 +16,7 @@ const Bar = ({ data, labels, lean }) => {
         return "#B2FF59";
       }
     });
+
     new Chart(myChartRef, {
       type: "bar",
       data: {
@@ -43,6 +45,16 @@ const Bar = ({ data, labels, lean }) => {
         ]
       },
       options: {
+        title: {
+          display: true,
+          fontSize: 16,
+          fontStyle: "bold",
+          padding: 20,
+          text: "Yearly OEE Report"
+        },
+        legend: {
+          display: false
+        },
         scales: {
           yAxes: [
             {

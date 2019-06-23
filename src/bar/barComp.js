@@ -1,8 +1,7 @@
 import React from "react";
-import Bar from "./bar";
-import { managerData, yearLabels, leandata } from "../mockData";
+import Bar from "./oeeBar";
 
-const BarComp = () => {
+const BarComp = ({ data, labels, bc, bg }) => {
   //   const [data, setData] = useState([]);
   //   const [labels, setLabels] = useState([]);
   //   setData(managerData);
@@ -10,7 +9,7 @@ const BarComp = () => {
 
   return (
     <div className="container-bar">
-      <Bar data={managerData} labels={yearLabels} />
+      {data ? <Bar data={data} labels={labels} bg={bg} bc={bc} /> : ""}
     </div>
   );
 };
